@@ -25,7 +25,7 @@ resource "google_container_cluster" "k8s" {
   initial_node_count = 6
 
   # this is going to be your project
-  project = "ajennings-test"
+  project = "amanda-jennings-gcp"
 
   master_auth {
     username = "test"
