@@ -15,12 +15,12 @@ provider "google" {
   # change this name to your project
   project = "-test"
   region  = "us-east4"
-  zone    = "us-east4-a"
+  zone    = "us-east4-b"
 }
 
 resource "google_container_cluster" "k8s" {
   name               = "k8s"
-  zone               = "us-east4-a"
+  zone               = "us-east4-b"
   # we need 4 of these for the demo
   initial_node_count = 6
 
