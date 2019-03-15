@@ -13,7 +13,7 @@ provider "google" {
   # credentials = "${file("/some/abs/path/to/your/json/file.json")}"
   credentials = "${var.serviceAccount}"
   # change this name to your project
-  project = "jjordan-test"
+  project = "-test"
   region  = "us-east4"
   zone    = "us-east4-a"
 }
@@ -22,10 +22,10 @@ resource "google_container_cluster" "k8s" {
   name               = "k8s"
   zone               = "us-east4-a"
   # we need 4 of these for the demo
-  initial_node_count = 4
+  initial_node_count = 6
 
   # this is going to be your project
-  project = "jjordan-test"
+  project = "ajennings-test"
 
   master_auth {
     username = "test"
